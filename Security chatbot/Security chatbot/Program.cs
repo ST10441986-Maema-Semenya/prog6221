@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +12,37 @@ namespace Security_chatbot
     {
         static void Main(string[] args)
         {
-            DisplayAsciiArtAsync();
+            try
+            {
+                PlaySoundAsync();
+                DisplayAsciiArtAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+
+        }
+        static async Task PlaySoundAsync()
+        {
+            const string soundLocation = "C:\\Users\\HP\\source\\repos\\Chatbot\\Recording.wav";
+            try
+            {
+                byte[] soundData = await Task.Run(() => File.ReadAllBytes(soundLocation));
+                using (MemoryStream stream = new MemoryStream(soundData))
+                {
+                    var player = new SoundPlayer(stream);
+                    player.PlaySync();
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("Sound file not found.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while playing sound: {ex.Message}");
+            }
         }
         static async Task DisplayAsciiArtAsync()
         {
