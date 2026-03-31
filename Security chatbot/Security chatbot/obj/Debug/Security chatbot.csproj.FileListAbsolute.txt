@@ -1,0 +1,7 @@
+C:\Users\KRLAdmin\source\repos\Security chatbot\Security chatbot\bin\Debug\Security chatbot.exe.config
+C:\Users\KRLAdmin\source\repos\Security chatbot\Security chatbot\bin\Debug\Security chatbot.exe
+C:\Users\KRLAdmin\source\repos\Security chatbot\Security chatbot\bin\Debug\Security chatbot.pdb
+C:\Users\KRLAdmin\source\repos\Security chatbot\Security chatbot\obj\Debug\Security chatbot.csproj.AssemblyReference.cache
+C:\Users\KRLAdmin\source\repos\Security chatbot\Security chatbot\obj\Debug\Security chatbot.csproj.CoreCompileInputs.cache
+C:\Users\KRLAdmin\source\repos\Security chatbot\Security chatbot\obj\Debug\Security chatbot.exe
+C:\Users\KRLAdmin\source\repos\Security chatbot\Security chatbot\obj\Debug\Security chatbot.pdb
